@@ -23,7 +23,7 @@ myManageHook = composeAll
 
 main = do
   customConfig <- myConfig
-  spawn "killall urxvtd; urxvtd -q -f -o; ~/.xmonad/startup-commands.sh">>xmonad customConfig
+  spawn "~/.xmonad/startup-commands.sh">>xmonad customConfig
 
 myConfig = do
   xmproc <- spawnPipe "/usr/bin/xmobar /home/even/.xmobarc.hs"
@@ -44,20 +44,17 @@ myConfig = do
     borderWidth = 4,
     normalBorderColor = "#cccccc",
     focusedBorderColor = "#eb8f00",
-    focusFollowsMouse = False -- prøver å bytte
+    focusFollowsMouse = False
     } `additionalKeys`
     [ ((mod4Mask .|. shiftMask, xK_l), spawn "gnome-screensaver-command --lock"),
+      ((mod4Mask .|. shiftMask, xK_s), spawn "sleep 0.1; gnome-screenshot -a"),
       ((mod4Mask, xK_Down), spawn "amixer set Master 5%-"),
       ((mod4Mask, xK_Up), spawn "amixer set Master 5%+"),
       ((mod4Mask, xK_b), sendMessage ToggleStruts),
       ((mod4Mask, xK_c), spawn "emacs"),
       ((mod4Mask, xK_o), spawn "google-chrome-stable"),
       ((mod4Mask, xK_w), kill),
-      --               ((mod4Mask .|. controlMask,  xK_q), spawn "gnome-session-quit"),
       ((0, xK_Scroll_Lock), spawn "dmenu_run -b -p drad$ -nb '#000000' -nf '#00B74A' -sb '#8E8888' -sf '#A60032'"),
-      -- terminal apps:
-      -- screen
-      ((0, xK_Print), spawn "urxvtc -e scrot '%Y-%m-%d_$wx$h_scrot.png' -e 'mv $f ~/screens/' "),
       -- task mgr
       ((mod1Mask .|. controlMask, xK_Delete), spawn "gnome-system-monitor"),
       -- irssi
