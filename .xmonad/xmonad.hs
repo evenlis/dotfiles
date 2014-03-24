@@ -5,6 +5,7 @@ import XMonad.Config.Desktop(desktopLayoutModifiers)
 
 import XMonad.StackSet
 import XMonad.Hooks.ManageHelpers
+import XMonad.Layout.Spacing
 import XMonad.Layout.NoBorders
 
 import XMonad.Actions.SpawnOn
@@ -40,8 +41,8 @@ myConfig = do
                { ppOutput = hPutStrLn xmproc,
                  ppTitle = xmobarColor "#6C8CD5" "" . shorten 50,
                  ppCurrent = xmobarColor "#6C8CD5" "" . wrap "(" ")"
-               },
-    borderWidth = 4,
+                },
+    borderWidth = 3,
     normalBorderColor = "#cccccc",
     focusedBorderColor = "#eb8f00",
     focusFollowsMouse = False
@@ -51,10 +52,12 @@ myConfig = do
       ((mod4Mask, xK_Down), spawn "amixer set Master 5%-"),
       ((mod4Mask, xK_Up), spawn "amixer set Master 5%+"),
       ((mod4Mask, xK_b), sendMessage ToggleStruts),
+      ((mod4Mask, xK_z), spawn "zathura"),
       ((mod4Mask, xK_c), spawn "emacs"),
       ((mod4Mask, xK_o), spawn "google-chrome-stable"),
       ((mod4Mask, xK_w), kill),
       ((0, xK_Scroll_Lock), spawn "dmenu_run -b -p drad$ -nb '#000000' -nf '#00B74A' -sb '#8E8888' -sf '#A60032'"),
+      ((mod4Mask, xK_Scroll_Lock), spawn "~/.calc.sh"),
       -- task mgr
       ((mod1Mask .|. controlMask, xK_Delete), spawn "gnome-system-monitor"),
       -- irssi
@@ -77,8 +80,9 @@ myStartupHook=do
   spawnOn "term" "gnome-terminal"
   spawnOn "emacs" "emacs"
   spawnOn "web" "google-chrome"
+  spawnOn "adium" "gnome-terminal -e finch"
 
-myWorkspaces = ["term", "emacs", "web"] ++ map show ([4..8] :: [Int]) ++ ["irssi"]
+myWorkspaces = ["term", "emacs", "web", "adium"] ++ map show ([5..8] :: [Int]) ++ ["irssi"]
 
 --startup = do
 --  spawn "synaptikscfg load"

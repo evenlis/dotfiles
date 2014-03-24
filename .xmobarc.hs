@@ -33,6 +33,6 @@ Config { font = "-*-Fixed-Bold-R-Normal-*-13-*-*-*-*-*-*-*"
 
        , alignSep = "}{"
 
-       , template = "%StdinReader% }{  %multicpu% | Temp: %coreTemp% | %memory% %swap% | %eth1% | <fc=#A7779E>%battery%</fc> | <fc=#FFC300>Vol: %myVolume%</fc> | <fc=#0099FF>%date%</fc>   "
+        , template = "%StdinReader% }{  %multicpu% | Temp: %coreTemp% |  %memory% %swap% | %eth1% | <fc=#A7779E>%battery%</fc> | <fc=#FFC300>Vol: %myVolume%</fc> | <fc=#0099FF>%date%</fc>   "
 
        }
