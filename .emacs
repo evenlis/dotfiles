@@ -1,49 +1,61 @@
-;;(add-hook 'haskell-mode-hook 'turn-on-haskell-indentation)
-(add-hook 'haskell-mode-hook 'turn-on-haskell-indent)
-;;(add-hook 'haskell-mode-hook 'turn-on-haskell-simple-indent)
-
 (tool-bar-mode -1)
 
-(require 'jabber)
-(require 'tramp)
-
+;; config load-paths
 (add-to-list 'load-path "~/.emacs.d/flex-mode")
-(require 'flex-mode)
-
-(add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
 (add-to-list 'load-path "~/.emacs.d/emacsAddons/")
 (add-to-list 'load-path "/home/even/.emacs.d/auto-complete")
-(require 'auto-complete-config)
-(require 'filesets)
 (add-to-list 'load-path "~/.emacs.d/plugins/yasnippet")
-(require 'yasnippet)
+(add-to-list 'custom-theme-load-path "~/.emacs.d/themes/emacs-color-theme-solarized/")
+(add-to-list 'custom-theme-load-path "~/.emacs.d/themes/noctilux-theme/")
+(add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
 
-(add-to-list 'ac-dictionary-directories "/home/even/.emacs.d/ac-dict")
 (require 'auto-complete-config)
+(require 'javadoc-help)
+(require 'filesets)
+(require 'yasnippet)
+(require 'jabber)
+(require 'tramp)
+(require 'flex-mode)
+(require 'highlight-parentheses)
+(require 'auto-complete-config)
+(require 'linum)
+(require 'smooth-scroll)
+
+(smooth-scroll-mode 1)
+(global-linum-mode 1)
 (ac-config-default)
+
+;; enable haskell-mode when editing frege files
+(add-to-list 'ac-dictionary-directories "/home/even/.emacs.d/ac-dict")
+(add-to-list 'auto-mode-alist '("\\.fr$" . haskell-mode))
+
+;; haskell mode indentation
+(add-hook 'haskell-mode-hook 'turn-on-haskell-indent)
+
+;; camelCase
+(add-hook 'prog-mode-hook 'subword-mode)
+(add-hook 'haskell-mode-hook 'subword-mode)
+
+;; delete trailing whitespace
+(add-hook 'before-save-hook 'delete-trailing-whitespace)
+(add-hook 'java-mode-hook '(lambda()
+			     (local-set-key (kbd "RET") 'newline-and-indent)))
 
 ;; magit test
 (setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
                          ("marmalade" . "http://marmalade-repo.org/packages/")
                          ("melpa" . "http://melpa.milkbox.net/packages/")))
 
-;; no more trailing whitespace
-(add-hook 'before-save-hook 'delete-trailing-whitespace)
-
-(add-hook 'java-mode-hook '(lambda()
-			     (local-set-key (kbd "RET") 'newline-and-indent)))
-
 (let ((default-directory "~/.emacs.d/emacsAddons/"))
   (normal-top-level-add-subdirs-to-load-path))
 
+;; highlight and insert matching delimiters
 (electric-pair-mode +1)
-
-(require 'linum) ;; line numbers
-(global-linum-mode 1)
-
-;; camelCase
-(add-hook 'prog-mode-hook 'subword-mode)
-(add-hook 'haskell-mode-hook 'subword-mode)
+(define-globalized-minor-mode global-highlight-parentheses-mode
+  highlight-parentheses-mode
+  (lambda ()
+    (highlight-parentheses-mode t)))
+(global-highlight-parentheses-mode t)
 
 ;; storing temporary data in the system's temporary directory instead of the current folder:
 (setq backup-directory-alist
@@ -51,9 +63,6 @@
     (setq auto-save-file-name-transforms
           `((".*" ,temporary-file-directory t)))
 
-;; loading solarized color theme:
-(add-to-list 'custom-theme-load-path "~/.emacs.d/themes/emacs-color-theme-solarized/")
-(add-to-list 'custom-theme-load-path "~/.emacs.d/themes/noctilux-theme/")
 ;;(load-theme 'solarized-light t)
 (set-face-attribute 'default nil :font"Inconsolata-13")
 
@@ -61,14 +70,8 @@
  (if window-system
       (set-frame-size (selected-frame) 80 24))
 
-
 (when (fboundp 'windmove-default-keybindings)
   (windmove-default-keybindings))
-;; hotkeys for resizing buffers.
-(global-set-key (kbd "S-C-<left>") 'shrink-window-horizontally)
-(global-set-key (kbd "S-C-<right>") 'enlarge-window-horizontally)
-(global-set-key (kbd "S-C-<down>") 'shrink-window)
-(global-set-key (kbd "S-C-<up>") 'enlarge-window)
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -91,11 +94,6 @@
  '(inhibit-startup-screen t)
  '(line-number-mode nil))
 
-(defun kill-other-buffers ()
-      "Kill all other buffers."
-      (interactive)
-      (mapc 'kill-buffer (delq (current-buffer) (buffer-list))))
-
 (load "auctex.el" nil t t)
 (load "preview-latex.el" nil t t)
 
@@ -109,6 +107,34 @@
 
 (setq tramp-shell-prompt-pattern "^[^$>\n]*[#$%>] *\\(\[[0-9;]*[a-zA-Z] *\\)*")
 
-(require 'smooth-scroll)
-;; scroll one line at a time (less "jumpy" than defaults)
-(smooth-scroll-mode 1)
+;; hotkeys for resizing buffers.
+(global-set-key (kbd "C-s-<left>") 'shrink-window-horizontally)
+(global-set-key (kbd "C-s-<right>") 'enlarge-window-horizontally)
+(global-set-key (kbd "C-s-<down>") 'shrink-window)
+(global-set-key (kbd "C-s-<up>") 'enlarge-window)
+
+;; handy bookmark hotkeys
+(global-set-key (kbd "C-s-c") 'bookmark-set)
+(global-set-key (kbd "C-s-l") 'bookmark-jump)
+(global-set-key (kbd "C-s-d") 'bookmark-delete)
+
+;; hotkey copy current line
+(global-set-key (kbd "C-s-w") 'my-copy-line)
+
+;;;;;;;;;; Custom functions ;;;;;;;;;;
+
+;; copy line to clipboard and kill ring, retain cursor position
+(defun my-copy-line ()
+  (interactive)
+  (save-excursion
+    (move-beginning-of-line nil)
+    (set-mark-command nil)
+    (move-end-of-line nil)
+    (setq deactivate-mark nil)
+    (clipboard-kill-ring-save (region-beginning) (region-end))))
+
+;; kill all buffers except current
+(defun kill-other-buffers ()
+      "Kill all other buffers."
+      (interactive)
+      (mapc 'kill-buffer (delq (current-buffer) (buffer-list))))

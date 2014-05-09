@@ -1,4 +1,4 @@
-;; -*- emacs-lisp -*- <14/03/24 10:43:34 /home/even/.emacs.d/tramp>
+;; -*- emacs-lisp -*- <14/04/25 17:55:28 /home/even/.emacs.d/tramp>
 ;; Tramp connection history.  Don't change this file.
 ;; You can delete it, forcing Tramp to reapply the checks.
 
@@ -35,25 +35,6 @@
   ("perl-file-spec" t)
   ("perl-cwd-realpath" t)
   ("perl" "\\perl"))
- (["ssh" "evenlis" "login.stud.ntnu.no" nil nil]
-  ("uname" "Linux 3.2.0-59-generic")
-  ("test" "test")
-  ("remote-path"
-   ("/bin" "/usr/bin" "/sbin" "/usr/sbin" "/usr/local/bin" "/usr/local/sbin" "/local/bin"))
-  ("remote-shell" "/bin/sh")
-  ("busybox" nil)
-  ("readlink" "\\readlink")
-  ("file-exists" "test -e")
-  ("stat" "\\stat")
-  ("id" "/usr/bin/id")
-  ("gid-integer" 13735)
-  ("uid-integer" 1090621)
-  ("ls" "/bin/ls --color=never")
-  ("perl-file-spec" t)
-  ("perl-cwd-realpath" t)
-  ("perl" "\\perl")
-  ("~" "/home/shomea/e/evenlis")
-  ("ls-dired" t))
  (["ssh" "evenlis" "gpu01.idi.ntnu.no" nil nil]
   ("uname" "Linux 3.8.0-29-generic")
   ("test" "test")
@@ -91,4 +72,40 @@
   ("perl-file-spec" t)
   ("perl-cwd-realpath" t)
   ("perl" "\\perl")
-  ("uid-integer" 1090621)))
+  ("uid-integer" 1090621))
+ (["ssh" "evenlis" "login.stud.ntnu.no" nil nil]
+  ("uname" "Linux 3.2.0-59-generic")
+  ("test" "test")
+  ("remote-path"
+   ("/bin" "/usr/bin" "/sbin" "/usr/sbin" "/usr/local/bin" "/usr/local/sbin" "/local/bin"))
+  ("remote-shell" "/bin/sh")
+  ("busybox" nil)
+  ("~" "/home/shomea/e/evenlis")
+  ("file-exists" "test -e")
+  ("ls" "/bin/ls --color=never")
+  ("ls-dired" t)
+  ("stat" "\\stat")
+  ("id" "/usr/bin/id")
+  ("gid-integer" 13735)
+  ("readlink" "\\readlink")
+  ("perl-file-spec" t)
+  ("perl-cwd-realpath" t)
+  ("perl" "\\perl")
+  ("uid-integer" 1090621))
+ (["ssh" "evenlis" "gpu03.idi.ntnu.no" nil nil]
+  ("uname" "Linux 3.8.0-29-generic")
+  ("test" "test")
+  ("remote-path"
+   ("/bin" "/usr/bin" "/sbin" "/usr/sbin" "/usr/local/bin" "/usr/local/sbin"))
+  ("remote-shell" "/bin/sh")
+  ("busybox" nil)
+  ("stat" "\\stat")
+  ("file-exists" "test -e")
+  ("id" "/usr/bin/id")
+  ("gid-integer" 13735)
+  ("readlink" "\\readlink")
+  ("perl-file-spec" t)
+  ("perl-cwd-realpath" t)
+  ("perl" "\\perl")
+  ("uid-integer" 1090621)
+  ("ls" "/bin/ls --color=never")))
