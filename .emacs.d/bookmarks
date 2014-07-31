@@ -1,0 +1,30 @@
+;;;; Emacs Bookmark Format Version 1 ;;;;
+;;; This format is meant to be slightly human-readable;
+;;; nevertheless, you probably don't want to edit it.
+;;; -*- End Of Bookmark File Format Version Stamp -*-
+(("tramp"
+ (filename . "~/.emacs")
+ (front-context-string . "(setq tramp-shel")
+ (rear-context-string . "work right.\n )\n\n")
+ (position . 4050))
+("cpline"
+ (filename . "~/.emacs")
+ (front-context-string . ";; copy line\n(gl")
+ (rear-context-string . "bookmark-jump)\n\n")
+ (position . 4921))
+("hpar"
+ (filename . "~/.emacs")
+ (front-context-string . ";; highlight par")
+ (rear-context-string . "region-end))))\n\n")
+ (position . 5220))
+("defkeyb"
+ (filename . "~/.emacs")
+ (front-context-string . "(when (fboundp '")
+ (rear-context-string . "rame) 80 24))\n\n\n")
+ (position . 2106))
+("kob"
+ (filename . "~/.emacs")
+ (front-context-string . "(defun kill-othe")
+ (rear-context-string . "ber-mode nil))\n\n")
+ (position . 3578))
+)

@@ -1,10 +1,30 @@
+/home/even/Program Architecture/simon/robotProject/src/helpers/map/pathfinding/DistanceAlgorithms.java
+/tmp/#!home!even!Program Architecture!simon!robotProject!src!helpers!map!pathfinding!DistanceAlgorithms.java#
+/home/even/Program Architecture/simon/robotProject/src/helpers/map/pathfinding/AStar.java
+/tmp/#!home!even!Program Architecture!simon!robotProject!src!helpers!map!pathfinding!AStar.java#
+/home/even/Program Architecture/simon/robotProject/src/helpers/map/pathfinding/Tile.java
+/tmp/#!home!even!Program Architecture!simon!robotProject!src!helpers!map!pathfinding!Tile.java#
+/home/even/Program Architecture/simon/robotProject/src/helpers/map/pathfinding/PathfindingMethod.java
+/tmp/#!home!even!Program Architecture!simon!robotProject!src!helpers!map!pathfinding!PathfindingMethod.java#
+/home/even/Program Architecture/simon/robotProject/src/tests/PathfindingTests.java
+/tmp/#!home!even!Program Architecture!simon!robotProject!src!tests!PathfindingTests.java#
+/home/even/Program Architecture/simon/robotProject/src/helpers/map/pathfinding/Pathfinding.java
+/tmp/#!home!even!Program Architecture!simon!robotProject!src!helpers!map!pathfinding!Pathfinding.java#
+/home/even/Program Architecture/simon/robotProject/src/helpers/map/Map.java
+/tmp/#!home!even!Program Architecture!simon!robotProject!src!helpers!map!Map.java#
+/home/even/Program Architecture/simon/robotProject/src/helpers/map/pathfinding/EMovement.java
+/tmp/#!home!even!Program Architecture!simon!robotProject!src!helpers!map!pathfinding!EMovement.java#
+/home/even/Program Architecture/simon/robotProject/src/helpers/map/pathfinding/Movement.java
+/tmp/#!home!even!Program Architecture!simon!robotProject!src!helpers!map!pathfinding!Movement.java#
+/home/even/Program Architecture/simon/robotProject/src/tests/ExploreTests.java
+/tmp/#!home!even!Program Architecture!simon!robotProject!src!tests!ExploreTests.java#
+/home/even/.xmonad/xmonad.hs
+/tmp/#!home!even!.xmonad!xmonad.hs#
 /home/even/.zshrc
 /tmp/#!home!even!.zshrc#
 /home/even/fjes.txt
 /tmp/#!home!even!fjes.txt#
 /home/even/kveg.txt
 /tmp/#!home!even!kveg.txt#
-/home/even/.xmonad/xmonad.hs
-/tmp/#!home!even!.xmonad!xmonad.hs#
 /home/even/.calc.sh
 /tmp/#!home!even!.calc.sh#
