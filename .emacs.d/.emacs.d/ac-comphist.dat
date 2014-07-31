@@ -1,0 +1,794 @@
+((("EAE5C6" .
+   [1 0 0 0 0 0])
+  ("itemCounter" .
+   [2 0 0 0 0 0 0 0 0 0 0])
+  ("none" .
+   [2 0 0 0])
+  (">" .
+   [2])
+  ("has" .
+   [2 0 0])
+  ("collapse" .
+   [2 0 0 0 0 0 0 0])
+  ("CategoryList" .
+   [1 0 0 0 0 0 0 0 0 0 0 0])
+  ("CategoryView" .
+   [1 0 0 0 0 0 0 0 0 0 0 0])
+  ("categoryContainer" .
+   [3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("append" .
+   [2 0 0 0 0 0])
+  ("length" .
+   [6 0 0 0 0 0])
+  ("toJSON" .
+   [2 0 0 0 0 0])
+  ("ImageList" .
+   [1 0 0 0 0 0 0 0 0])
+  ("html" .
+   [2 0 0 0])
+  ("el" .
+   [2 0])
+  ("render" .
+   [2 0 0 0 0 0])
+  ("appendChild" .
+   [2 0 0 0 0 0 0 0 0 0 0])
+  ("ImageView" .
+   [1 0 0 0 0 0 0 0 0])
+  ("Image" .
+   [1 0 0 0 0])
+  ("view" .
+   [4 0 0 0])
+  ("image" .
+   [2 0 0 0 0])
+  ("createDocumentFragment" .
+   [1 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0])
+  ("document" .
+   [2 0 0 0 0 0 0 0])
+  ("imageContainer" .
+   [2 0 0 0 0 0 0 0 1 0 0 0 0 0])
+  ("category" .
+   [2 0 0 0 0 0 0 1])
+  ("title" .
+   [2 0 0 0 0])
+  ("attributes" .
+   [3 0 0 0 0 0 0 0 0 0])
+  ("url" .
+   [1 0 0])
+  ("filename" .
+   [4 0 0 0 0 0 0 0])
+  ("model" .
+   [7 0 0 0 0])
+  ("categoryName" .
+   [2 0 0 0 0 0 0 0 0 1 0 0])
+  ("hide" .
+   [2 0 0 0])
+  ("confirm" .
+   [2 0 0 0 0 0 0])
+  ("replace" .
+   [1 0 0 0 0 0 0])
+  ("attr" .
+   [1 0 0 0])
+  ("find" .
+   [1 0 0 0])
+  ("closest" .
+   [4 0 0 0 0 0 1])
+  ("currentTarget" .
+   [0 0 1 0 2 0 1 2 0 0 0 0 0])
+  ("imgName" .
+   [2 0 0 0 1 0 0])
+  ("amazonURL" .
+   [1 0 0 0 0 0 0 0 1])
+  ("var" .
+   [7 0 0])
+  ("event" .
+   [12 0 0 0 0])
+  ("delete" .
+   [2 0 0 0 0 0])
+  ("E24000" .
+   [1 0 0 0 0 0])
+  ("Background" .
+   [0 0 0 0 2 0 0 0 0 0])
+  ("deleteButton" .
+   [0 0 0 0 0 0 0 0 0 1 0 0])
+  ("prototype" .
+   [1 0 0 0 0 0 0 0 0])
+  ("LoginView" .
+   [1 0 0 0 0 0 0 0 0])
+  ("log" .
+   [17 0 0])
+  ("console" .
+   [18 0 0 0 0 0 0])
+  ("enterKeyPassword" .
+   [1 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0])
+  ("function" .
+   [7 0 0 0 0 0 0 0])
+  ("tab-width" .
+   [1 0 0 0 0 0 0 0 0])
+  ("coffee-mode-hook" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("flymake-coffee" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("flymake-easy" .
+   [0 0 0 0 0 0 0 0 0 0 1 0])
+  ("lambda" .
+   [1 0 0 0 0 0])
+  ("add-hook" .
+   [2 0 0 0 0 0 0 0])
+  ("flymake-coffeelint" .
+   [0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0])
+  ("bookmark-delete" .
+   [0 0 0 0 0 0 0 0 0 0 0 1 0 0 0])
+  ("point" .
+   [1 0 0 0 0])
+  ("kill-ring-save" .
+   [0 0 0 0 0 0 0 0 0 0 0 1 0 0])
+  ("yank-pop" .
+   [0 0 0 0 1 0 0 0])
+  ("kbd" .
+   [7 0 0])
+  ("global-set-key" .
+   [0 0 0 0 0 0 1 0 0 0 0 0 0 6])
+  ("copy-line" .
+   [2 0 0 0 0 0 0 0 0])
+  ("undo" .
+   [3 0 0 0])
+  ("kill-region" .
+   [0 0 0 0 0 0 0 0 0 0 1])
+  ("kill-new" .
+   [0 0 0 0 0 1 0 0])
+  ("deactivate-mark" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 3])
+  ("move-end-of-line" .
+   [0 0 0 0 0 0 0 0 3 0 0 0 0 0 0 0])
+  ("move-beginning-of-line" .
+   [0 0 0 0 0 0 0 2 0 0 1 0 0 0 0 0 0 0 0 0 0 0])
+  ("nil" .
+   [24 0 0])
+  ("interactive" .
+   [2 0 0 0 0 0 0 1 0 0 0])
+  ("HDMI-1" .
+   [2 0 0 0 0 0])
+  ("--off" .
+   [2 0 0 0 0])
+  ("xrandr" .
+   [3 0 0 0 0 0])
+  ("stdbool" .
+   [1 0 0 0 0 0 0])
+  ("unsigned" .
+   [2 0 0 0 0 0 0 0])
+  ("const" .
+   [2 0 0 0 0])
+  ("isButtonPressed" .
+   [0 0 0 1 0 0 0 0 0 0 0 0 0 0 0])
+  ("gpio_handler" .
+   [1 0 0 0 0 0 0 0 0 0 0 0])
+  ("maxHealth" .
+   [1 0 0 0 0 0 0 0 0])
+  ("Even" .
+   [1 0 0 0])
+  ("10" .
+   [1 0])
+  ("position" .
+   [1 0 0 0 0 0 0 0])
+  ("health" .
+   [1 0 0 0 0 0])
+  ("MAP_WIDTH" .
+   [1 0 0 0 0 0 0 0 1])
+  ("enemies" .
+   [0 0 0 0 0 1 0])
+  ("Enemy" .
+   [1 0 0 0 0])
+  ("/***/" .
+   [0 0 1 0 0])
+  ("/**\\n*\\n*\\n*\\n*\\n*\\n*\\n*/" .
+   [0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("javadoc-help" .
+   [0 0 0 0 0 0 1 0 0 0 0 0])
+  ("LOAD" .
+   [2 0 0 0])
+  ("result" .
+   [2 0 0 0 0 0])
+  ("nArguments" .
+   [0 0 0 0 0 1 0 0 0 0])
+  ("function_entry" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("pc" .
+   [1 0])
+  ("POP" .
+   [2 0 0])
+  ("fp" .
+   [4 0])
+  ("lr" .
+   [5 0])
+  ("CALL" .
+   [2 0 0 0])
+  ("stack_offset" .
+   [0 0 0 0 0 0 1 0 1 0 0 0])
+  ("symbol_t" .
+   [0 0 0 0 0 0 0 1])
+  ("sp" .
+   [3 0])
+  ("PUSH" .
+   [5 0 0 0])
+  ("r0" .
+   [7 0])
+  ("entry" .
+   [4 0 0 0 0])
+  ("MOVE" .
+   [7 0 0 0])
+  ("label" .
+   [10 0 0 0 0])
+  ("a" .
+   [2])
+  ("STRDUP" .
+   [7 0 0 0 0 0])
+  ("instruction_add" .
+   [18 0 0 0 0 0 0 0 0 0 0 0 0 0 2])
+  ("scopedepth" .
+   [1 0 0 0 0 0 0 0 0 0])
+  ("generate" .
+   [1 0 0 0 0 0 0 0])
+  ("children" .
+   [38 0 0 0 0 0 0 0])
+  ("FUNCTION" .
+   [1 0 0 0 0 0 0 0])
+  ("nt_number" .
+   [0 0 1 0 0 0 0 0 0])
+  ("nodetype" .
+   [1 0 0 0 0 0 0 0])
+  ("strings_add" .
+   [1 0 0 0 0 0 0 0 0 0 0])
+  ("string_index" .
+   [1 0 0 0 0 0 0 0 0 0 0 0])
+  ("base_type" .
+   [1 0 0 0 0 0 0 0 0])
+  ("data_type" .
+   [6 0 0 0 0 0 0 0 1])
+  ("data" .
+   [1 0 0 0])
+  ("string_const" .
+   [0 0 0 0 0 0 0 1 1 0 0 0])
+  ("node" .
+   [1 0 0 0])
+  ("printf" .
+   [5 0 0 0 0 0])
+  ("RemoteException" .
+   [0 0 0 1 0 0 0 2 0 0 0 0 0 0 1])
+  ("rmi" .
+   [4 0 0])
+  ("java" .
+   [6 0 0 0])
+  ("import" .
+   [8 0 0 0 0 0])
+  ("Remote" .
+   [2 0 0 0 0 0])
+  ("extends" .
+   [2 0 0 0 0 0 0])
+  ("TicTacToeInterface" .
+   [1 0 1 0 0 0 0 0 0 0 0 0 0 0 1 0 0 2])
+  ("interface" .
+   [1 0 0 0 0 0 0 0 0])
+  ("echo" .
+   [21 0 0 0])
+  ("-l" .
+   [2 0])
+  ("bc" .
+   [2 0])
+  ("Calculate:" .
+   [2 0 0 0 0 0 0 0 0 0])
+  ("setq" .
+   [11 0 0 0])
+  ("public" .
+   [23 0 0 0 0 0])
+  ("class" .
+   [2 0 0 0 0])
+  ("static" .
+   [3 0 0 1 1 0])
+  ("void" .
+   [20 0 0 0])
+  ("for" .
+   [11 0 0])
+  ("int" .
+   [13 0 0])
+  ("String" .
+   [2 0 0 0 0 0])
+  ("blackbox" .
+   [0 0 0 0 0 0 0 1])
+  (":" .
+   [1])
+  ("define" .
+   [1 0 0 0 0 0])
+  ("PURPLE_PLUGINS" .
+   [0 0 0 0 0 0 1 0 0 0 0 0 0 0])
+  ("include" .
+   [5 0 0 0 0 0 1])
+  ("glib" .
+   [1 0 0 1])
+  ("gboolean" .
+   [1 0 0 0 0 1 0 0])
+  ("plugin" .
+   [2 0 0 0 0 2])
+  ("plugin_load" .
+   [0 0 0 0 0 0 0 0 2 0 0])
+  ("PurplePlugin" .
+   [0 0 0 0 0 0 0 0 0 0 0 2])
+  ("PURPOSE" .
+   [1 0 0 0 0 0 0])
+  ("purple_notify_message" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1])
+  ("PURPLE_NOTIFY_MSG_INFO" .
+   [0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("NULL" .
+   [22 0 0 0])
+  ("return" .
+   [18 0 0 0 0 1])
+  ("PurplePluginInfo" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0])
+  ("info" .
+   [2 0 0 0])
+  ("PURPLE_PLUGIN_MAGIC" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0])
+  ("PURPLE_MAJOR_VERSION" .
+   [1 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("PURPLE_MINOR_VERSION" .
+   [0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("PURPLE_PLUGIN_STANDARD" .
+   [0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("PURPLE_PRIORITY_DEFAULT" .
+   [0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("init_plugin" .
+   [0 0 0 0 0 1 1 0 0 0 0])
+  ("PURPLE_INIT_PLUGIN" .
+   [0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0])
+  ("hello_world" .
+   [0 0 0 0 0 1 0 0 0 0 0])
+  ("t" .
+   [1])
+  ("TRUE" .
+   [0 0 0 1])
+  ("util" .
+   [1 0 0 0])
+  ("try" .
+   [2 0 0])
+  ("super" .
+   [1 0 0 0 0])
+  ("checkPermission" .
+   [0 0 0 0 0 0 1 0 0 0 0 0 0 0 0])
+  ("perm" .
+   [5 0 0 0])
+  ("catch" .
+   [2 0 0 0 0])
+  ("e" .
+   [1])
+  ("if" .
+   [13 0])
+  ("permissions" .
+   [3 0 0 0 0 0 0 0 0 0 0])
+  ("contains" .
+   [1 0 0 0 0 0 0 0])
+  ("add" .
+   [1 0 0])
+  ("LenientSecurityManager" .
+   [0 0 0 1 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("new" .
+   [4 0 0])
+  ("HashSet" .
+   [1 0 0 0 0 0 0])
+  ("grantedPermissions" .
+   [0 0 0 0 2 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("Hashtable" .
+   [1 0 0 0 0 0 0 0 0])
+  ("Naming" .
+   [1 0 0 0 0 0])
+  ("registry" .
+   [2 0 0 0 0 0 0 0])
+  ("rebind" .
+   [1 0 0 0 0 0])
+  ("stub" .
+   [3 0 0 0])
+  ("throws" .
+   [1 0 0 0 0 0])
+  ("setOpponent" .
+   [2 0 0 0 0 1 0 0 0 0 1])
+  ("char" .
+   [7 0 0 0])
+  ("mark" .
+   [1 0 0 0])
+  ("boolean" .
+   [5 0 0 0 0 0 0])
+  ("setMark" .
+   [2 0 0 0 0 0 0])
+  ("boardModel" .
+   [1 0 0 0 0 0 2 0 0 0])
+  ("setCell" .
+   [3 0 0 0 0 0 0])
+  ("private" .
+   [3 0 0 0 0 0 0])
+  ("final" .
+   [2 0 0 0 0])
+  ("opponentMark" .
+   [0 0 0 1 0 3 0 0 0 0 0 0])
+  ("this" .
+   [9 0 0 0])
+  ("server" .
+   [10 0 0 0 0 0])
+  ("newGame" .
+   [1 0 0 0 1 0 0])
+  ("leaveGame" .
+   [1 0 0 0 0 0 0 0 0])
+  ("null" .
+   [4 0 0 0])
+  ("setMyTurn" .
+   [2 0 0 0 0 0 0 0 0])
+  ("myTurn" .
+   [2 0 1 1 1 0])
+  ("is" .
+   [2 0])
+  ("isMyTurn" .
+   [1 0 0 0 1 0 0 0])
+  ("obj" .
+   [2 0 0])
+  ("row" .
+   [1 0 0])
+  ("col" .
+   [1 0 0])
+  ("getRowCount" .
+   [0 0 0 0 0 0 1 0 0 0 0])
+  ("board" .
+   [1 0 0 0 0])
+  ("getColumnCount" .
+   [0 0 0 0 0 0 0 0 0 0 1 0 0 0])
+  ("setOpponentMark" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("System" .
+   [1 0 0 3 0 0])
+  ("out" .
+   [0 0 3])
+  ("println" .
+   [1 0 0 0 1 0 2])
+  ("err" .
+   [1 0 0])
+  ("false" .
+   [1 0 0 0 0])
+  ("repaint" .
+   [1 0 0 0 0 0 0])
+  ("n_children" .
+   [5 0 0 1 0 3 2 1 0 3])
+  ("root" .
+   [86 0 0 0])
+  ("else" .
+   [3 0 0 0])
+  ("eieio-hook" .
+   [0 0 0 0 1 0 0 0 0 0])
+  ("skånsom" .
+   [1 0 0 0 0 0 0])
+  ("tilbyr" .
+   [1 0 0 0 0 0])
+  ("som" .
+   [7 0 0])
+  ("klar" .
+   [1 0 0 0])
+  ("bevist" .
+   [4 0 0 0 0 0])
+  ("effekt" .
+   [1 0 1 0 0 0])
+  ("umiddelbar" .
+   [2 0 0 0 0 0 0 0 0 0])
+  ("huden." .
+   [3 0 0 0 0 1])
+  ("Experience" .
+   [1 0 1 0 0 0 0 0 1 0])
+  ("eksfoliering" .
+   [0 0 0 0 0 0 1 0 0 0 0 1])
+  ("klinisk" .
+   [1 0 0 0 0 0 0])
+  ("100%" .
+   [2 0 0 0])
+  ("med" .
+   [8 0 0])
+  ("foryngende" .
+   [2 0 0 0 0 0 0 0 0 0])
+  ("en" .
+   [5 0])
+  ("produktet" .
+   [2 0 0 0 0 0 0 0 0])
+  ("huden" .
+   [4 0 0 0 0])
+  ("effektiv" .
+   [1 0 0 0 0 0 0 0])
+  ("over" .
+   [1 0 0 0])
+  ("den" .
+   [2 0 0])
+  ("Silikondioksid" .
+   [0 0 0 1 1 1 0 0 0 0 0 0 0 0])
+  ("dermed" .
+   [2 0 0 0 0 0])
+  ("bambus" .
+   [2 0 0 0 0 0])
+  ("har" .
+   [2 0 0])
+  ("av" .
+   [1 0])
+  ("næringsstoffer" .
+   [0 0 0 0 0 1 0 0 0 0 1 0 0 0])
+  ("minusp" .
+   [0 0 0 0 0 1])
+  ("mineraler" .
+   [1 0 0 0 0 1 0 0 0])
+  ("rynker" .
+   [1 0 0 0 0 0])
+  ("organisk" .
+   [1 0 0 0 0 0 0 0])
+  ("er" .
+   [2 0])
+  ("høyst" .
+   [1 0 0 0 0])
+  ("det" .
+   [3 0 0])
+  ("Bamboo" .
+   [2 0 0 0 0 0])
+  ("studier" .
+   [3 0 0 0 0 0 0])
+  ("kalsium" .
+   [1 0 0 0 0 0 0])
+  ("kalium" .
+   [1 0 0 0 0 0])
+  ("antioksidanter" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("forbedrer" .
+   [1 0 0 0 0 0 0 0 0])
+  ("Flerfoldige" .
+   [1 0 0 0 0 0 0 0 0 0 0])
+  ("Yerba" .
+   [3 0 0 0 0])
+  ("Mate" .
+   [3 0 0 0])
+  ("blodårer" .
+   [1 0 0 0 0 0 0 0])
+  ("økt" .
+   [1 0 0])
+  ("påvist" .
+   [1 0 0 0 0 0])
+  ("under" .
+   [1 0 0 0 0])
+  ("grunnet" .
+   [1 0 0 0 0 0 1])
+  ("høyt" .
+   [2 0 0 0])
+  ("innhold" .
+   [1 0 0 0 0 0 0])
+  ("bidrar" .
+   [1 0 0 0 0 0])
+  ("til" .
+   [1 0 0])
+  ("energiproduksjon" .
+   [0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0])
+  ("sertifiserte" .
+   [1 0 0 0 0 0 0 0 0 0 0 0])
+  ("ToxicFree" .
+   [0 0 0 0 0 0 0 0 1])
+  ("organiske" .
+   [1 0 0 0 0 0 0 0 0])
+  ("alle" .
+   [1 0 0 0])
+  ("require" .
+   [7 0 0 0 0 0 0])
+  ("filesets" .
+   [2 0 0 0 0 0 0 0])
+  ("bool" .
+   [2 0 0 0])
+  ("fjes" .
+   [9 0 0 0])
+  ("i" .
+   [1])
+  ("fjess" .
+   [6 0 0 0 0])
+  ("fjesss" .
+   [3 0 0 0 0 0])
+  ("fjessss" .
+   [1 0 0 0 0 0 0])
+  ("alias" .
+   [4 0 0 0 0])
+  ("arg_string" .
+   [0 0 1 9 2 0 0 0 0 2])
+  ("local" .
+   [5 0 0 0 0])
+  ("1.." .
+   [1 0 0])
+  ("done" .
+   [5 0 0 0])
+  ("num_dirs" .
+   [1 0 0 2 3 0 0 0])
+  ("var_label" .
+   [1 0 0 0 0 0 0 0 0])
+  ("simplify_default" .
+   [5 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1])
+  ("depth" .
+   [7 0 0 0 0])
+  ("Node_t" .
+   [17 0 0 0 0 0])
+  ("sizeof" .
+   [4 0 0 0 0 0])
+  ("parameters" .
+   [1 0 0 0 0 0 0 0 0 0])
+  ("statements" .
+   [1 0 0 0 0 0 0 0 0 0])
+  ("declarations" .
+   [1 0 0 0 0 0 0 0 0 0 0 0])
+  ("realloc" .
+   [3 0 0 0 0 0 0])
+  ("declaration_list" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1])
+  ("s" .
+   [2])
+  ("f" .
+   [1])
+  ("free" .
+   [1 0 0 0])
+  ("node_finalize" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("left_sub_tree" .
+   [0 0 0 0 0 1 0 0 0 0 0 0 0])
+  ("simplify" .
+   [2 0 0 0 0 0 0 0])
+  ("temp" .
+   [2 0 0 0])
+  ("c" .
+   [1])
+  ("right_sub_tree" .
+   [0 0 1 0 0 0 0 0 0 0 0 0 0 0])
+  ("join_sub_trees" .
+   [0 0 0 0 2 0 0 0 0 0 0 0 0 0])
+  ("et_number" .
+   [1 0 0 0 0 0 0 0 0])
+  ("type" .
+   [6 0 0 0])
+  ("expression_type" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("index" .
+   [1 0 0 0 0])
+  ("UMINUS_E" .
+   [0 0 0 0 0 0 1 0])
+  ("NEW_E" .
+   [1 0 0 0 0])
+  ("NOT_E" .
+   [1 0 0 0 0])
+  ("add-to-list" .
+   [1 0 0 0 0 0 0 0 0 0 0])
+  ("load-path" .
+   [1 0 0 0 0 0 0 0 0])
+  ("/**" .
+   [2 0 0])
+  ("gnome" .
+   [1 0 0 0 0])
+  ("--auto" .
+   [12 0 0 0 0 0])
+  ("--output" .
+   [10 0 0 0 0 0 0 0])
+  ("VGA-1" .
+   [10 0 0 0 0])
+  ("LVDS-1" .
+   [7 0 0 0 1 0])
+  ("auto" .
+   [1 0 0 0])
+  ("defun" .
+   [5 0 0 0 0])
+  ("beginning-of-line" .
+   [0 0 0 0 0 0 1 0 1 0 0 0 0 0 0 0 0])
+  ("kill-line" .
+   [2 0 0 0 0 0 0 0 2])
+  ("set-mark-command" .
+   [1 0 0 0 0 0 0 0 0 1 2 0 2 0 0 0])
+  ("end-of-line" .
+   [1 0 0 0 0 0 0 0 0 0 0])
+  ("copy-region-as-kill" .
+   [0 0 0 0 0 0 0 0 2 1 0 0 0 0 0 0 0 0 0])
+  ("set-marker" .
+   [0 0 0 0 0 0 0 0 0 1])
+  ("save-excursion" .
+   [0 0 0 0 0 0 0 1 0 0 0 0 0 0])
+  ("region-beginning" .
+   [0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0])
+  ("region-end" .
+   [0 0 0 0 0 0 1 0 1 0])
+  ("clipboard-kill-ring-save" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0])
+  ("bookmark-map" .
+   [0 0 0 0 0 0 0 0 0 0 0 1])
+  ("bookmark-set" .
+   [0 0 0 0 0 0 0 0 0 0 1 0])
+  ("bookmark-jump" .
+   [0 0 0 0 0 0 0 0 0 0 1 0 0])
+  ("backup" .
+   [0 0 1 0 0 0])
+  ("backward-kill-word" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 2 0 0 0 0])
+  ("backward-delete-char" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0])
+  ("my-kill-current-line" .
+   [0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("coffee-mode" .
+   [0 0 0 0 0 1 0 0 0 0 0])
+  ("coffeelintnode-location" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0])
+  ("coffeelintnode-node-program" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0])
+  ("coffeelintnode-coffeelint-excludes" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("list" .
+   [1 0 0 0])
+  ("coffeelintnode-coffeelint-set" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("coffeelintnode-autostart" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("unless" .
+   [1 0 0 0 0 0])
+  ("eq" .
+   [1 0])
+  ("buffer-file-name" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("flymake-mode" .
+   [1 0 0 0 0 0 0 0 0 0 0 0])
+  ("local-set-key" .
+   [2 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("f2" .
+   [1 0])
+  ("flymake-goto-prev-error" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("f3" .
+   [1 0])
+  ("flymake-goto-next-error" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("custom-set-variables" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0])
+  ("coffee-tab-width" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("google-chrome" .
+   [0 0 0 1 1 0 0 0 0 0 0 0 0])
+  ("scroll-bar-mode" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("-1" .
+   [1 0])
+  ("md5" .
+   [1 0 0])
+  ("val" .
+   [5 0 0])
+  ("tagsinput" .
+   [1 0 0 0 0 0 0 0 0])
+  ("submit" .
+   [1 0 0 0 0 0])
+  ("preventDefault" .
+   [0 0 0 0 1 0 0 0 0 0 0 0 0 0])
+  ("email" .
+   [2 0 0 0 0])
+  ("password" .
+   [1 0 0 0 0 0 0 0])
+  ("xhr" .
+   [1 0 0])
+  ("settings" .
+   [1 0 0 0 0 0 0 0])
+  ("uname" .
+   [3 0 0 0 0])
+  ("pass" .
+   [3 0 0 0])
+  ("response" .
+   [1 0 0 0 0 0 0 0])
+  ("trim" .
+   [2 0 0 0])
+  ("JSON" .
+   [3 0 0 0])
+  ("parse" .
+   [3 0 0 0 0])
+  ("stringify" .
+   [1 0 0 0 0 0 0 0 0])
+  ("r" .
+   [2])
+  ("resp" .
+   [2 0 0 0])
+  ("text" .
+   [1 0 0 0])
+  ("textStatus" .
+   [1 0 0 0 0 0 0 0 0 0])
+  ("status" .
+   [1 0 0 0 0 0])))
