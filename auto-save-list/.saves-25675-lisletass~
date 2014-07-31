@@ -1,0 +1,18 @@
+/ssh:evenlis@login.stud.ntnu.no:/home/shomea/e/evenlis/Compiler Technology/ps2/src/scanner.l
+/tmp/#_assh_bevenlis@login.stud.ntnu.no_b_ahome_ashomea_ae_aevenlis_aCompiler Technology_aps2_asrc_ascanner.l#
+/ssh:evenlis@login.stud.ntnu.no:/home/shomea/e/evenlis/Compiler Technology/ps2/src/parser.y
+/tmp/#_assh_bevenlis@login.stud.ntnu.no_b_ahome_ashomea_ae_aevenlis_aCompiler Technology_aps2_asrc_aparser.y#
+/ssh:evenlis@login.stud.ntnu.no:/home/shomea/e/evenlis/Compiler Technology/ps2/testOutput/all_lexical.s1
+/tmp/#_assh_bevenlis@login.stud.ntnu.no_b_ahome_ashomea_ae_aevenlis_aCompiler Technology_aps2_atestOutput_aall__lexical.s1#
+/ssh:evenlis@login.stud.ntnu.no:/home/shomea/e/evenlis/Compiler Technology/ps2/vsl_programs/simple.vsl
+/tmp/#_assh_bevenlis@login.stud.ntnu.no_b_ahome_ashomea_ae_aevenlis_aCompiler Technology_aps2_avsl__programs_asimple.vsl#
+/ssh:evenlis@login.stud.ntnu.no:/home/shomea/e/evenlis/Compiler Technology/ps2/src/tree.h
+/tmp/#_assh_bevenlis@login.stud.ntnu.no_b_ahome_ashomea_ae_aevenlis_aCompiler Technology_aps2_asrc_atree.h#
+/ssh:evenlis@login.stud.ntnu.no:/home/shomea/e/evenlis/Compiler Technology/ps2/src/tree.c
+/tmp/#_assh_bevenlis@login.stud.ntnu.no_b_ahome_ashomea_ae_aevenlis_aCompiler Technology_aps2_asrc_atree.c#
+/ssh:evenlis@login.stud.ntnu.no:/home/shomea/e/evenlis/Compiler Technology/ps2/src/symtab.h
+/tmp/#_assh_bevenlis@login.stud.ntnu.no_b_ahome_ashomea_ae_aevenlis_aCompiler Technology_aps2_asrc_asymtab.h#
+/ssh:evenlis@login.stud.ntnu.no:/home/shomea/e/evenlis/Compiler Technology/ps2/src/nodetypes.h
+/tmp/#_assh_bevenlis@login.stud.ntnu.no_b_ahome_ashomea_ae_aevenlis_aCompiler Technology_aps2_asrc_anodetypes.h#
+/ssh:evenlis@login.stud.ntnu.no:/home/shomea/e/evenlis/fjes.c
+/tmp/#_assh_bevenlis@login.stud.ntnu.no_b_ahome_ashomea_ae_aevenlis_afjes.c#
