@@ -188,3 +188,5 @@ powersave(){
 	xbacklight -set 100
     fi
 }
+
+PATH=$PATH:/home/evenlis/.cabal/bin/
