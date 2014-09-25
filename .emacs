@@ -179,6 +179,7 @@
 
 ;; call quickrun on current buffer
 (global-set-key (kbd "C-q") 'quickrun)
+(global-set-key (kbd "C-s-q") 'quickrun-with-arg)
 
 ;; bookmark hotkeys
 (global-set-key (kbd "C-s-c") 'bookmark-set)
