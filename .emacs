@@ -34,6 +34,7 @@
 (scroll-bar-mode -1)
 
 (add-to-list 'auto-mode-alist '("\\.qml\\'" . qml-mode))
+(add-to-list 'auto-mode-alist '("\\.scala\\'" . scala-mode))
 
 ;; quickrun C++ config
 (quickrun-add-command "c++/c11"
