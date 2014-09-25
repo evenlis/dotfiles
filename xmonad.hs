@@ -1,14 +1,16 @@
 import XMonad hiding( (|||) )
 import XMonad.Layout.LayoutCombinators
+import XMonad.Config.Azerty
 import XMonad.Util.EZConfig(additionalKeys)
 import XMonad.Config.Desktop(desktopLayoutModifiers)
 import XMonad.Layout.PerWorkspace
 import XMonad.Layout.Grid
+import XMonad.Actions.CycleWS
+import XMonad.Layout.NoBorders
 
 import XMonad.StackSet
 import XMonad.Hooks.ManageHelpers
 import XMonad.Layout.Spacing
-import XMonad.Layout.NoBorders
 
 import XMonad.Actions.SpawnOn
 import Data.Monoid
@@ -26,9 +28,10 @@ myManageHook = composeAll
 main = do
   customConfig <- myConfig
   spawn "~/.xmonad/startup-commands.sh">>xmonad customConfig
+  xmonad azertyConfig
 
 myConfig = do
-  xmproc <- spawnPipe "/usr/bin/xmobar /home/even/.xmobarc.hs"
+  xmproc <- spawnPipe "/usr/bin/xmobar /home/evenlis/.xmobarc.hs"
   return $ defaultConfig {
 
     startupHook = myStartupHook,
@@ -43,26 +46,31 @@ myConfig = do
                  ppTitle = xmobarColor "#6C8CD5" "" . shorten 50,
                  ppCurrent = xmobarColor "#6C8CD5" "" . wrap "(" ")"
                 },
-    borderWidth = 3,
+    borderWidth = 2,
     normalBorderColor = "#cccccc",
     focusedBorderColor = "#eb8f00",
     focusFollowsMouse = False
     } `additionalKeys`
     [ ((mod4Mask .|. shiftMask, xK_l), spawn "gnome-screensaver-command --lock"),
       ((mod4Mask .|. shiftMask, xK_s), spawn "sleep 0.1; gnome-screenshot -a"),
-      ((mod4Mask, xK_Down), spawn "amixer set Master 5%-"),
-      ((mod4Mask, xK_Up), spawn "amixer set Master 5%+"),
+      ((mod4Mask, xK_Down), spawn "amixer -c 1 set Master 5%-"),
+      ((mod4Mask, xK_Up), spawn "amixer -c 1 set Master 5%+"),
+      ((mod4Mask, xK_Left), spawn "xbacklight -dec 15"),
+      ((mod4Mask, xK_Right), spawn "xbacklight -inc 15"),
       ((mod4Mask, xK_b), sendMessage ToggleStruts),
-      ((mod4Mask, xK_z), spawn "zathura"),
+      ((mod4Mask, xK_u), prevWS),
+      ((mod4Mask, xK_i), nextWS),
+      ((mod4Mask .|. shiftMask, xK_i), nextScreen),
+      ((mod4Mask .|. shiftMask, xK_u), prevScreen),
       ((mod4Mask, xK_c), spawn "emacs"),
+      ((mod4Mask, xK_z), spawn "zathura"),
       ((mod4Mask, xK_o), spawn "google-chrome-stable"),
+      ((mod4Mask, xK_n), spawn "google-chrome --app=http://radio.nrk.no/direkte/p13"),
       ((mod4Mask, xK_w), kill),
-      ((0, xK_Scroll_Lock), spawn "dmenu_run -b -p drad$ -nb '#000000' -nf '#00B74A' -sb '#8E8888' -sf '#A60032'"),
+      ((0, xK_Scroll_Lock), spawn "dmenu_run -b -i -l 10 -p \">\" -fn \"-*-helvetica-bold-r-normal-*-17-*-100-*-p-0-*-15\""),
       ((mod4Mask, xK_Scroll_Lock), spawn "~/.calc.sh"),
       -- task mgr
       ((mod1Mask .|. controlMask, xK_Delete), spawn "gnome-system-monitor"),
-      -- irssi
-      ((mod4Mask, xK_i), spawn "gnome-terminal -e irssi"),
 
       -- Audio
       ((mod4Mask, xK_a), spawn "gnome-terminal -e alsamixer -c 1"),
