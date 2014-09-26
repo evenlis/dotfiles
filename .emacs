@@ -172,10 +172,10 @@
 (global-set-key (kbd "C-s-k") 'next-buffer)
 
 ;; switch between windows
-(global-set-key (kbd "C-s-b") 'windmove-left)
-(global-set-key (kbd "C-s-f") 'windmove-right)
-(global-set-key (kbd "C-s-p") 'windmove-up)
-(global-set-key (kbd "C-s-n") 'windmove-down)
+(global-set-key (kbd "C-M-b") 'windmove-left)
+(global-set-key (kbd "C-M-f") 'windmove-right)
+(global-set-key (kbd "C-M-p") 'windmove-up)
+(global-set-key (kbd "C-M-n") 'windmove-down)
 
 ;; call quickrun on current buffer
 (global-set-key (kbd "C-q") 'quickrun)
