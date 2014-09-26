@@ -192,7 +192,33 @@
 ;; hotkey to toggle god-mode
 (global-set-key (kbd "<escape>") 'god-local-mode)
 
+;; hotkey to transpose windows
+(global-set-key (kbd "C-s-SPC") 'transpose-windows)
+(global-set-key (kbd "C-s-n") 'transpose-n-windows)
 ;;;;;;;;;; Custom functions ;;;;;;;;;;
+
+;; transpose n windows
+(defun transpose-n-windows ()
+  (interactive)
+  (cond ((one-window-p) (display-buffer (other-buffer)))
+        ((let* ((buffer-a (current-buffer))
+                (window-b (cadr (window-list)))
+                (buffer-b (window-buffer window-b)))
+           (set-window-buffer window-b buffer-a)
+           (switch-to-buffer buffer-b)
+           (other-window 1)))))
+
+;; transpose windows
+(defun transpose-windows ()
+  (interactive)
+  (let ((this-buffer (window-buffer (selected-window)))
+        (other-buffer (prog2
+                          (other-window +1)
+                          (window-buffer (selected-window))
+                        (other-window -1))))
+    (switch-to-buffer other-buffer)
+    (switch-to-buffer-other-window this-buffer)
+    (other-window -1)))
 
 ;; copy line to clipboard and kill ring, retain cursor position
 (defun my-copy-line ()
