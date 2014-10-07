@@ -168,8 +168,8 @@
 (global-set-key (kbd "C-s-<up>") 'enlarge-window)
 
 ;; cycle buffers
-(global-set-key (kbd "C-s-j") 'previous-buffer)
-(global-set-key (kbd "C-s-k") 'next-buffer)
+(global-set-key (kbd "C-s-k") 'previous-buffer)
+(global-set-key (kbd "C-s-j") 'next-buffer)
 
 ;; switch between windows
 (global-set-key (kbd "C-M-b") 'windmove-left)
