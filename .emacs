@@ -195,6 +195,9 @@
 ;; hotkey to transpose windows
 (global-set-key (kbd "C-s-SPC") 'transpose-windows)
 (global-set-key (kbd "C-s-n") 'transpose-n-windows)
+
+;; hotkey to close window without killing buffer
+(global-set-key (kbd "C-s-w") 'delete-window)
 ;;;;;;;;;; Custom functions ;;;;;;;;;;
 
 ;; transpose n windows
