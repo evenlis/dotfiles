@@ -36,6 +36,8 @@
 (add-to-list 'auto-mode-alist '("\\.qml\\'" . qml-mode))
 (add-to-list 'auto-mode-alist '("\\.scala\\'" . scala-mode))
 
+(electric-indent-mode 0) ; Habituated to C-j, no way am I converting to RETURN for newline-and-indent
+
 ;; quickrun C++ config
 (quickrun-add-command "c++/c11"
                       '((:command . "g++")
@@ -187,7 +189,7 @@
 (global-set-key (kbd "C-s-d") 'bookmark-delete)
 
 ;; hotkey copy current line
-(global-set-key (kbd "C-s-w") 'my-copy-line)
+;; (global-set-key (kbd "C-s-w") 'my-copy-line)
 
 ;; hotkey to toggle god-mode
 (global-set-key (kbd "<escape>") 'god-local-mode)
@@ -198,6 +200,9 @@
 
 ;; hotkey to close window without killing buffer
 (global-set-key (kbd "C-s-w") 'delete-window)
+
+;; hotkey to kill buffer and window
+(global-set-key (kbd "C-M-w") 'kill-buffer-and-window)
 ;;;;;;;;;; Custom functions ;;;;;;;;;;
 
 ;; transpose n windows
