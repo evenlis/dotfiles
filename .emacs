@@ -34,9 +34,9 @@
 (scroll-bar-mode -1)
 
 (add-to-list 'auto-mode-alist '("\\.qml\\'" . qml-mode))
+(add-hook 'qml-mode-hook (lambda () (subword-mode 1)))
 (add-to-list 'auto-mode-alist '("\\.scala\\'" . scala-mode))
-
-(electric-indent-mode 0) ; Habituated to C-j, no way am I converting to RETURN for newline-and-indent
+(add-to-list 'auto-mode-alist '("\\.fs\\'" . fsharp-mode))
 
 ;; quickrun C++ config
 (quickrun-add-command "c++/c11"
@@ -62,6 +62,10 @@
 ;; haskell mode indentation
 (add-hook 'haskell-mode-hook 'turn-on-haskell-indent)
 
+;; uniquify buffer names
+(require 'uniquify) ; bundled with GNU emacs 23.2.1 or before. On in 24.4
+(setq uniquify-buffer-name-style 'post-forward-angle-brackets) ; emacs 24.4 style ⁖ cat.png<dirName>
+
 ;; set 2 spaces default indentation
 (setq-default indent-tabs-mode nil)
 (setq-default tab-width 2)
@@ -85,25 +89,71 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(TeX-PDF-mode t)
- '(TeX-command-list (quote (("TeX" "%(PDF)%(tex) %`%S%(PDFout)%(mode)%' %t" TeX-run-TeX nil (plain-tex-mode texinfo-mode ams-tex-mode) :help "Run plain TeX") ("LaTeX" "%`%l%(mode)%' %t" TeX-run-TeX nil (latex-mode doctex-mode) :help "Run LaTeX") ("Makeinfo" "makeinfo %t" TeX-run-compile nil (texinfo-mode) :help "Run Makeinfo with Info output") ("Makeinfo HTML" "makeinfo --html %t" TeX-run-compile nil (texinfo-mode) :help "Run Makeinfo with HTML output") ("AmSTeX" "%(PDF)amstex %`%S%(PDFout)%(mode)%' %t" TeX-run-TeX nil (ams-tex-mode) :help "Run AMSTeX") ("ConTeXt" "texexec --once --texutil %(execopts)%t" TeX-run-TeX nil (context-mode) :help "Run ConTeXt once") ("ConTeXt Full" "texexec %(execopts)%t" TeX-run-TeX nil (context-mode) :help "Run ConTeXt until completion") ("BibTeX" "bibtex %s" TeX-run-BibTeX nil t :help "Run BibTeX") ("Biber" "biber %s" TeX-run-Biber nil t :help "Run Biber") ("View" "zathura -P 1 %s.pdf" TeX-run-discard-or-function t t :help "Run Viewer") ("Print" "%p" TeX-run-command t t :help "Print the file") ("Queue" "%q" TeX-run-background nil t :help "View the printer queue" :visible TeX-queue-command) ("File" "%(o?)dvips %d -o %f " TeX-run-command t t :help "Generate PostScript file") ("Index" "makeindex %s" TeX-run-command nil t :help "Create index file") ("Check" "lacheck %s" TeX-run-compile nil (latex-mode) :help "Check LaTeX file for correctness") ("Spell" "(TeX-ispell-document \"\")" TeX-run-function nil t :help "Spell-check the document") ("Clean" "TeX-clean" TeX-run-function nil t :help "Delete generated intermediate files") ("Clean All" "(TeX-clean t)" TeX-run-function nil t :help "Delete generated intermediate and output files") ("Other" "" TeX-run-command t t :help "Run an arbitrary command"))))
+ '(TeX-command-list
+   (quote
+    (("TeX" "%(PDF)%(tex) %`%S%(PDFout)%(mode)%' %t" TeX-run-TeX nil
+      (plain-tex-mode texinfo-mode ams-tex-mode)
+      :help "Run plain TeX")
+     ("LaTeX" "%`%l%(mode)%' %t" TeX-run-TeX nil
+      (latex-mode doctex-mode)
+      :help "Run LaTeX")
+     ("Makeinfo" "makeinfo %t" TeX-run-compile nil
+      (texinfo-mode)
+      :help "Run Makeinfo with Info output")
+     ("Makeinfo HTML" "makeinfo --html %t" TeX-run-compile nil
+      (texinfo-mode)
+      :help "Run Makeinfo with HTML output")
+     ("AmSTeX" "%(PDF)amstex %`%S%(PDFout)%(mode)%' %t" TeX-run-TeX nil
+      (ams-tex-mode)
+      :help "Run AMSTeX")
+     ("ConTeXt" "texexec --once --texutil %(execopts)%t" TeX-run-TeX nil
+      (context-mode)
+      :help "Run ConTeXt once")
+     ("ConTeXt Full" "texexec %(execopts)%t" TeX-run-TeX nil
+      (context-mode)
+      :help "Run ConTeXt until completion")
+     ("BibTeX" "bibtex %s" TeX-run-BibTeX nil t :help "Run BibTeX")
+     ("Biber" "biber %s" TeX-run-Biber nil t :help "Run Biber")
+     ("View" "zathura -P 1 %s.pdf" TeX-run-discard-or-function t t :help "Run Viewer")
+     ("Print" "%p" TeX-run-command t t :help "Print the file")
+     ("Queue" "%q" TeX-run-background nil t :help "View the printer queue" :visible TeX-queue-command)
+     ("File" "%(o?)dvips %d -o %f " TeX-run-command t t :help "Generate PostScript file")
+     ("Index" "makeindex %s" TeX-run-command nil t :help "Create index file")
+     ("Check" "lacheck %s" TeX-run-compile nil
+      (latex-mode)
+      :help "Check LaTeX file for correctness")
+     ("Spell" "(TeX-ispell-document \"\")" TeX-run-function nil t :help "Spell-check the document")
+     ("Clean" "TeX-clean" TeX-run-function nil t :help "Delete generated intermediate files")
+     ("Clean All" "(TeX-clean t)" TeX-run-function nil t :help "Delete generated intermediate and output files")
+     ("Other" "" TeX-run-command t t :help "Run an arbitrary command"))))
  '(TeX-engine (quote luatex))
  '(TeX-source-correlate-method (quote synctex))
  '(TeX-source-correlate-mode t)
  '(TeX-source-correlate-start-server t)
  '(TeX-view-program-list (quote (("zathura" "zathura -P 1 %s.pdf"))))
- '(TeX-view-program-selection (quote ((output-pdf "zathura") (output-dvi "xdvi") (output-pdf "zathura") (output-html "xdg-open"))))
- '(ansi-color-names-vector ["#242424" "#e5786d" "#95e454" "#cae682" "#8ac6f2" "#333366" "#ccaa8f" "#f6f3e8"])
- '(ansi-term-color-vector [unspecified "#2d2d2d" "#f2777a" "#99cc99" "#ffcc66" "#6699cc" "#cc99cc" "#66cccc" "#f2f0ec"])
+ '(TeX-view-program-selection
+   (quote
+    ((output-pdf "zathura")
+     (output-dvi "xdvi")
+     (output-pdf "zathura")
+     (output-html "xdg-open"))))
+ '(ansi-color-names-vector
+   ["#242424" "#e5786d" "#95e454" "#cae682" "#8ac6f2" "#333366" "#ccaa8f" "#f6f3e8"])
+ '(ansi-term-color-vector
+   [unspecified "#2d2d2d" "#f2777a" "#99cc99" "#ffcc66" "#6699cc" "#cc99cc" "#66cccc" "#f2f0ec"])
  '(background-color "#202020")
  '(background-mode dark)
  '(coffee-tab-width 4)
  '(cursor-color "#cccccc")
  '(custom-enabled-themes (quote (tango-dark)))
- '(custom-safe-themes (quote ("7cd77efdb74989d9efe482c530b0839cd3c34003aca88311d09bc08ed2669ecf" "5f39ab775124aaccc7db0e9437cc9eccf7bcbc7ff2a3dc71e9bfd51a937be6cf" "1e7e097ec8cb1f8c3a912d7e1e0331caeed49fef6cff220be63bd2a6ba4cc365" "fc5fcb6f1f1c1bc01305694c59a1a861b008c534cae8d0e48e4d5e81ad718bc6" "88d556f828e4ec17ac074077ef9dcaa36a59dccbaa6f2de553d6528b4df79cbd" default)))
+ '(custom-safe-themes
+   (quote
+    ("7cd77efdb74989d9efe482c530b0839cd3c34003aca88311d09bc08ed2669ecf" "5f39ab775124aaccc7db0e9437cc9eccf7bcbc7ff2a3dc71e9bfd51a937be6cf" "1e7e097ec8cb1f8c3a912d7e1e0331caeed49fef6cff220be63bd2a6ba4cc365" "fc5fcb6f1f1c1bc01305694c59a1a861b008c534cae8d0e48e4d5e81ad718bc6" "88d556f828e4ec17ac074077ef9dcaa36a59dccbaa6f2de553d6528b4df79cbd" default)))
  '(foreground-color "#cccccc")
  '(inhibit-startup-screen t)
  '(line-number-mode nil)
  '(python-indent-offset 2)
+ '(send-mail-function (quote mailclient-send-it))
  '(tool-bar-mode nil)
  '(user-full-name "Even Lislebø")
  '(user-mail-address "e.lislebo@gmail.com"))
@@ -114,8 +164,6 @@
 
 ;; delete trailing whitespace
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
-(add-hook 'java-mode-hook '(lambda()
-			     (local-set-key (kbd "RET") 'newline-and-indent)))
 
 ;; magit test
 (setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
@@ -204,6 +252,9 @@
 ;; hotkey to kill buffer and window
 (global-set-key (kbd "C-M-w") 'kill-buffer-and-window)
 ;;;;;;;;;; Custom functions ;;;;;;;;;;
+
+;; neotree hotkey
+(global-set-key (kbd "M-RET") 'neotree-toggle)
 
 ;; transpose n windows
 (defun transpose-n-windows ()

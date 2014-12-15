@@ -5,19 +5,19 @@ prompt adam1
 
 setopt histignorealldups sharehistory
 
+source ~/.bash_aliases
+
 # Temporary custom aliases
 alias odinadmin="cd ~/micronax/odin-image && ls"
 alias odinserver="cd ~/micronax/odin-server && ls"
 alias odinclient="cd ~/micronax/odin && ls"
 
 # Permanent custom aliases
-alias poweroff='sudo poweroff'
 alias pm-hibernate='sudo pm-hibernate'
-alias lsext='ls --sort=extension'
-alias ls='ls -F --color=auto'
-alias ll='ls -l --color=auto'
-alias la='ls -A --color=auto'
-alias l='ls -F --color=auto'
+alias ls='ls -F --color=auto --sort=extension'
+alias ll='ls -l --color=auto --sort=extension'
+alias la='ls -A --color=auto --sort=extension'
+alias l='ls -F --color=auto --sort=extension'
 alias -- ¨="cd ~"
 alias -- -="cd -"
 alias egrep='egrep --color=auto'
@@ -58,6 +58,10 @@ HISTFILE=~/.zsh_history
 # Use modern completion system
 autoload -Uz compinit
 compinit
+
+jpgi(){
+    convert $1 -print "Size %wx%h\n" /dev/null
+}
 
 mkdircd(){
     mkdir -p "$@" && eval cd "\"\$$#\"";
@@ -137,44 +141,44 @@ monitors-off(){
 
 triple-monitor(){
     if [ $# -lt "2" ] || [ $# -gt "4" ]; then
-	echo -e "Usage: \n\ttriple-monitor <hdmipos> <vgapos>[ <rotate-hdmi> <rotate-vga>]"
-	return
+	      echo -e "Usage: \n\ttriple-monitor <hdmipos> <vgapos>[ <rotate-hdmi> <rotate-vga>]"
+	      return
     fi
     VALIDPARAMS=false
-    if [ $# = "3" ]; then
-	if [ $3 = "left" ] || [ $3 = "right" ] || [ $3 = "normal" ]; then
-	    xrandr --output HDMI1 --rotate $3
-	else
-	    echo -e "Invalid argument \"$3\""
-	    return
-	fi
-    elif [ $# = "4" ]; then
-	if [ $3 = "left" ] || [ $3 = "right" ] || [ $3 = "normal" ]; then
-	    xrandr --output HDMI1 --rotate $3
-	else
-	    echo -e "Invalid argument \"$3\""
-	    return
-	fi
-	if [ $4 = "left" ] || [ $4 = "right" ] || [ $4 = "normal" ]; then
-	    xrandr --output VGA1 --rotate $4
-	else
-	    echo -e "Invalid argument \"$4\""
-	fi
-    else
-	xrandr --output HDMI1 --rotate normal --output VGA1 --rotate normal
-    fi
     if [ $1 = "left" ]; then
-	if [ $2 = "right" ]; then
-	    xrandr --output HDMI1 --auto --left-of eDP1 --output VGA1 --auto --right-of eDP1
-	elif [ $2 = "mid" ]; then
-	    xrandr --output  VGA1 --auto --left-of eDP1 --output HDMI1 --auto --left-of VGA1
-	fi
+	      if [ $2 = "right" ]; then
+	          xrandr --output VGA1 --auto --right-of eDP1 --output HDMI1 --auto --left-of eDP1
+	      elif [ $2 = "mid" ]; then
+	          xrandr --output  VGA1 --auto --left-of eDP1 --output HDMI1 --auto --left-of VGA1
+	      fi
     elif [ $1 = "mid" ]; then
-	if [ $2 = "left" ]; then
-	    xrandr --output HDMI1 --auto --left-of eDP1 --output VGA1 --auto --left-of HDMI1
-	elif [ $2 = "right" ]; then
-	    xrandr --output HDMI1 --auto --right-of eDP1 --output VGA1 --auto --right-of HDMI1
-	fi
+	      if [ $2 = "left" ]; then
+	          xrandr --output HDMI1 --auto --left-of eDP1 --output VGA1 --auto --left-of HDMI1
+	      elif [ $2 = "right" ]; then
+	          xrandr --output HDMI1 --auto --right-of eDP1 --output VGA1 --auto --right-of HDMI1
+	      fi
+    fi
+    if [ $# = "3" ]; then
+	      if [ $3 = "left" ] || [ $3 = "right" ] || [ $3 = "normal" ]; then
+	          xrandr --output HDMI1 --rotate $3
+	      else
+	          echo -e "Invalid argument \"$3\""
+	          return
+	      fi
+    elif [ $# = "4" ]; then
+	      if [ $3 = "left" ] || [ $3 = "right" ] || [ $3 = "normal" ]; then
+	          xrandr --output HDMI1 --primary --rotate $3
+	      else
+	          echo -e "Invalid argument \"$3\""
+	          return
+	      fi
+	      if [ $4 = "left" ] || [ $4 = "right" ] || [ $4 = "normal" ]; then
+	          xrandr --output VGA1 --rotate $4
+	      else
+	          echo -e "Invalid argument \"$4\""
+	      fi
+    else
+	      xrandr --output HDMI1 --rotate normal --output VGA1 --rotate normal
     fi
 }
 
@@ -189,4 +193,4 @@ powersave(){
     fi
 }
 
-PATH=$PATH:/home/evenlis/.cabal/bin/
+PATH=$PATH:/home/evenlis/.cabal/bin/:/home/evenlis/dev/android-sdk-linux/platform-tools
