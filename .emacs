@@ -32,6 +32,7 @@
 (global-linum-mode 1)
 (ac-config-default)
 (scroll-bar-mode -1)
+(column-number-mode 1)
 
 (add-to-list 'auto-mode-alist '("\\.qml\\'" . qml-mode))
 (add-hook 'qml-mode-hook (lambda () (subword-mode 1)))
