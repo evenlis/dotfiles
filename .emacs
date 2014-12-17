@@ -38,6 +38,15 @@
 (add-to-list 'auto-mode-alist '("\\.scala\\'" . scala-mode))
 (add-to-list 'auto-mode-alist '("\\.fs\\'" . fsharp-mode))
 
+;; F# hotkeys
+(add-hook 'fsharp-mode-hook
+          (lambda () (define-key fsharp-mode-map (kbd "M-h") 'insert-back-pipe)))
+(add-hook 'fsharp-mode-hook
+          (lambda () (define-key fsharp-mode-map (kbd "M-l") 'insert-fwd-pipe)))
+(add-hook 'fsharp-mode-hook
+          (lambda () (define-key fsharp-mode-map (kbd "M-n") 'insert-choice-operator)))
+
+
 ;; quickrun C++ config
 (quickrun-add-command "c++/c11"
                       '((:command . "g++")
@@ -255,6 +264,21 @@
 
 ;; neotree hotkey
 (global-set-key (kbd "M-RET") 'neotree-toggle)
+
+(defun insert-back-pipe ()
+  "Insert <| at cursor point."
+  (interactive)
+  (insert "<|"))
+
+(defun insert-fwd-pipe ()
+  "Insert |> at cursor point."
+  (interactive)
+  (insert "|>"))
+
+(defun insert-choice-operator ()
+  "Insert <|> at cursor point."
+  (interactive)
+  (insert "<|>"))
 
 ;; transpose n windows
 (defun transpose-n-windows ()
