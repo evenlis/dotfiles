@@ -12,7 +12,6 @@
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes/noctilux-theme/")
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
 
-
 (require 'iso-transl)
 (require 'auto-complete-config)
 (require 'filesets)
@@ -162,6 +161,7 @@
  '(foreground-color "#cccccc")
  '(inhibit-startup-screen t)
  '(line-number-mode nil)
+ '(nxml-slash-auto-complete-flag t)
  '(python-indent-offset 2)
  '(send-mail-function (quote mailclient-send-it))
  '(tool-bar-mode nil)
@@ -261,6 +261,7 @@
 
 ;; hotkey to kill buffer and window
 (global-set-key (kbd "C-M-w") 'kill-buffer-and-window)
+
 ;;;;;;;;;; Custom functions ;;;;;;;;;;
 
 ;; neotree hotkey
@@ -281,17 +282,6 @@
   (interactive)
   (insert "<|>"))
 
-;; transpose n windows
-(defun transpose-n-windows ()
-  (interactive)
-  (cond ((one-window-p) (display-buffer (other-buffer)))
-        ((let* ((buffer-a (current-buffer))
-                (window-b (cadr (window-list)))
-                (buffer-b (window-buffer window-b)))
-           (set-window-buffer window-b buffer-a)
-           (switch-to-buffer buffer-b)
-           (other-window 1)))))
-
 ;; transpose windows
 (defun transpose-windows ()
   (interactive)
@@ -303,16 +293,6 @@
     (switch-to-buffer other-buffer)
     (switch-to-buffer-other-window this-buffer)
     (other-window -1)))
-
-;; copy line to clipboard and kill ring, retain cursor position
-(defun my-copy-line ()
-  (interactive)
-  (save-excursion
-    (move-beginning-of-line nil)
-    (set-mark-command nil)
-    (move-end-of-line nil)
-    (setq deactivate-mark nil)
-    (clipboard-kill-ring-save (region-beginning) (region-end))))
 
 ;; kill all buffers except current
 (defun kill-other-buffers ()
