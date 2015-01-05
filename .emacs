@@ -26,6 +26,7 @@
 (require 'flymake)
 (require 'eww)
 (require 'quickrun)
+(require 'eclim)
 
 (smooth-scroll-mode 1)
 (global-linum-mode 1)
