@@ -42,6 +42,11 @@
 (add-to-list 'auto-mode-alist '("\\.fs\\'" . fsharp-mode))
 (add-hook 'java-mode-hook (lambda () (eclim-mode 1)))
 
+;; eclim config
+(custom-set-variables
+  '(eclim-eclipse-dirs '("~/eclipse"))
+  '(eclim-executable "~/eclipse/eclim"))
+
 ;; F# hotkeys
 (add-hook 'fsharp-mode-hook
           (lambda () (define-key fsharp-mode-map (kbd "M-h") 'insert-back-pipe)))
