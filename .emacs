@@ -6,11 +6,13 @@
 (add-to-list 'load-path "~/.emacs.d/flex-mode")
 (add-to-list 'load-path "~/.emacs.d/emacsAddons/")
 (add-to-list 'load-path "/home/evenlis/.emacs.d/auto-complete")
-(add-to-list 'load-path "~/.emacs.d/plugins/yasnippet")
 (add-to-list 'load-path "~/.gnus")
+(add-to-list 'load-path "~/.emacs.d/emacs-eclim")
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes/emacs-color-theme-solarized/")
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes/noctilux-theme/")
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
+(let ((default-directory "~/.emacs.d/emacsAddons/"))
+  (normal-top-level-add-subdirs-to-load-path))
 
 (require 'iso-transl)
 (require 'auto-complete-config)
@@ -181,9 +183,6 @@
 (setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
                          ("marmalade" . "http://marmalade-repo.org/packages/")
                          ("melpa" . "http://melpa.milkbox.net/packages/")))
-
-(let ((default-directory "~/.emacs.d/emacsAddons/"))
-  (normal-top-level-add-subdirs-to-load-path))
 
 ;; highlight and insert matching delimiters
 (electric-pair-mode +1)

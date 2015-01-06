@@ -1,0 +1,22 @@
+;; Emacs-W3 HTTP cookies file
+;; Automatically generated file!!! DO NOT EDIT!!!
+
+(setq url-cookie-storage
+ '((".youtube.com"
+  [url-cookie "VISITOR_INFO1_LIVE" "YiXRuOzDwSo" "02-Aug-2015 01:50:21.00 GMT" "/" ".youtube.com" nil]
+  [url-cookie "PREF" "f1=50000000" "02-Aug-2015 01:50:21.00 GMT" "/" ".youtube.com" nil])
+ (".google.no"
+  [url-cookie "HttpOnly" nil "05-May-2015 18:25:36.00 GMT" "/" ".google.no" nil]
+  [url-cookie "NID" "67=izDRaqUFoW6r8YTNjV5yOFi1jWRES_baJ20CakkDvgOGTS-yTkKHciRknRJMpzMdIe7C8Tuc09CTPMEHBPj_ZGutub77GsiU2FHUKVqoa-B-GO5LNpqrUWf83Av8BTn9" "05-May-2015 18:25:36.00 GMT" "/" ".google.no" nil]
+  [url-cookie "PREF" "ID=99094a5c02f1369c:U=f1cb928ade6247e7:FF=0:TM=1415039136:LM=1415039145:S=CH8E9X5GnxFE025R" "02-Nov-2016 18:25:45.00 GMT" "/" ".google.no" nil]))
+)
+(setq url-cookie-secure-storage
+ '((".github.com"
+  [url-cookie "logged_in" "no" "01-Dec-2034 13:40:29.00 GMT" "/" ".github.com" t]
+  [url-cookie "HttpOnly" nil "01-Dec-2034 13:40:29.00 GMT" "/" ".github.com" t]))
+)
+
+;; Local Variables:
+;; version-control: never
+;; no-byte-compile: t
+;; End:
