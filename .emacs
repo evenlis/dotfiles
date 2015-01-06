@@ -29,6 +29,10 @@
 (require 'eww)
 (require 'quickrun)
 (require 'eclim)
+(require 'eclimd)
+(require 'ac-emacs-eclim-source)
+(require 'company)
+(require 'company-emacs-eclim)
 
 (smooth-scroll-mode 1)
 (global-linum-mode 1)
@@ -46,6 +50,18 @@
 (custom-set-variables
   '(eclim-eclipse-dirs '("~/eclipse"))
   '(eclim-executable "~/eclipse/eclim"))
+
+;; eclim, show error detail in echo area
+(setq help-at-pt-display-when-idle t)
+(setq help-at-pt-timer-delay 0.1)
+(help-at-pt-set-timer)
+
+;; eclim, auto complete
+(ac-emacs-eclim-config)
+
+;; eclim, company-mode style autocompletion
+(company-emacs-eclim-setup)
+(global-company-mode t)
 
 ;; F# hotkeys
 (add-hook 'fsharp-mode-hook
