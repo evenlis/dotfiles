@@ -44,7 +44,6 @@
 (add-hook 'qml-mode-hook (lambda () (subword-mode 1)))
 (add-to-list 'auto-mode-alist '("\\.scala\\'" . scala-mode))
 (add-to-list 'auto-mode-alist '("\\.fs\\'" . fsharp-mode))
-(add-hook 'java-mode-hook (lambda () (eclim-mode 1)))
 
 ;; eclim config
 (custom-set-variables
