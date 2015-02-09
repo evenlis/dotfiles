@@ -36,7 +36,6 @@
 
 (smooth-scroll-mode 1)
 (global-linum-mode 1)
-(ac-config-default)
 (scroll-bar-mode -1)
 (column-number-mode 1)
 
@@ -60,7 +59,17 @@
 
 ;; eclim, company-mode style autocompletion
 (company-emacs-eclim-setup)
-(global-company-mode t)
+
+(delq 'ac-source-yasnippet ac-sources)
+
+;; eclim, start all necessary java features
+(defun eclim ()
+  (interactive)
+  (eclim-mode 1)
+  (ac-config-default)
+  (global-company-mode t))
+
+(defalias 'eclimd 'start-eclimd)
 
 ;; F# hotkeys
 (add-hook 'fsharp-mode-hook
@@ -282,6 +291,11 @@
 
 ;; hotkey to kill buffer and window
 (global-set-key (kbd "C-M-w") 'kill-buffer-and-window)
+
+;; hotkey to zoom in an out
+(global-set-key (kbd "C-S-<double-mouse-5>") 'text-scale-decrease)
+(global-set-key (kbd "C-S-<double-mouse-4>") 'text-scale-increase)
+(global-set-key (kbd "C-=") 'text-scale-adjust)
 
 ;;;;;;;;;; Custom functions ;;;;;;;;;;
 
