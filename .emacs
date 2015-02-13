@@ -14,6 +14,8 @@
 (let ((default-directory "~/.emacs.d/emacsAddons/"))
   (normal-top-level-add-subdirs-to-load-path))
 
+(defalias 'pinst 'package-install)
+
 (require 'iso-transl)
 (require 'auto-complete-config)
 (require 'filesets)
