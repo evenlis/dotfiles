@@ -8,6 +8,7 @@
 (add-to-list 'load-path "/home/evenlis/.emacs.d/auto-complete")
 (add-to-list 'load-path "~/.gnus")
 (add-to-list 'load-path "~/.emacs.d/emacs-eclim")
+(add-to-list 'load-path "/home/evenlis/dev/android-sdk-linux/tools/lib")
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes/emacs-color-theme-solarized/")
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes/noctilux-theme/")
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
@@ -35,6 +36,10 @@
 (require 'ac-emacs-eclim-source)
 (require 'company)
 (require 'company-emacs-eclim)
+(require 'android-mode)
+(require 'android)
+
+(custom-set-variables '(android-mode-sdk-dir "/home/evenlis/dev/android-sdk-linux"))
 
 (smooth-scroll-mode 1)
 (global-linum-mode 1)
