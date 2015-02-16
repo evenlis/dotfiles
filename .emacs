@@ -283,8 +283,9 @@
 (global-set-key (kbd "C-s-l") 'bookmark-jump)
 (global-set-key (kbd "C-s-d") 'bookmark-delete)
 
-;; hotkey copy current line
-;; (global-set-key (kbd "C-s-w") 'my-copy-line)
+;; quick android build & deploy
+(global-set-key (kbd "C-c C-j") 'android-ant-debug)
+(global-set-key (kbd "C-x C-j") 'android-ant-installd)
 
 ;; hotkey to toggle god-mode
 (global-set-key (kbd "<escape>") 'god-local-mode)
@@ -304,10 +305,10 @@
 (global-set-key (kbd "C-S-<double-mouse-4>") 'text-scale-increase)
 (global-set-key (kbd "C-=") 'text-scale-adjust)
 
-;;;;;;;;;; Custom functions ;;;;;;;;;;
-
 ;; neotree hotkey
 (global-set-key (kbd "M-RET") 'neotree-toggle)
+
+;;;;;;;;;; Custom functions ;;;;;;;;;;
 
 (defun insert-back-pipe ()
   "Insert <| at cursor point."
