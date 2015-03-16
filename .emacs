@@ -16,6 +16,9 @@
   (normal-top-level-add-subdirs-to-load-path))
 
 (defalias 'pinst 'package-install)
+(defalias 'yes-or-no-p 'y-or-n-p)
+
+(package-initialize)
 
 (require 'iso-transl)
 (require 'auto-complete-config)
@@ -38,6 +41,7 @@
 (require 'company-emacs-eclim)
 (require 'android-mode)
 (require 'android)
+(require 'smex)
 
 (custom-set-variables '(android-mode-sdk-dir "/home/evenlis/dev/android-sdk-linux"))
 
@@ -45,6 +49,8 @@
 (global-linum-mode 1)
 (scroll-bar-mode -1)
 (column-number-mode 1)
+(ido-mode 1)
+(smex-initialize)
 
 (add-to-list 'auto-mode-alist '("\\.qml\\'" . qml-mode))
 (add-hook 'qml-mode-hook (lambda () (subword-mode 1)))
@@ -307,6 +313,10 @@
 
 ;; neotree hotkey
 (global-set-key (kbd "M-RET") 'neotree-toggle)
+
+;; smex
+(global-set-key (kbd "M-x") 'smex)
+(global-set-key (kbd "<menu>") 'smex)
 
 ;;;;;;;;;; Custom functions ;;;;;;;;;;
 
