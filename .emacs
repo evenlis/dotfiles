@@ -50,6 +50,7 @@
 (scroll-bar-mode -1)
 (column-number-mode 1)
 (ido-mode 1)
+(ido-vertical-mode 1)
 (smex-initialize)
 
 (add-to-list 'auto-mode-alist '("\\.qml\\'" . qml-mode))
