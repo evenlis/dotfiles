@@ -7,6 +7,7 @@ import XMonad.Layout.PerWorkspace
 import XMonad.Layout.Grid
 import XMonad.Actions.CycleWS
 import XMonad.Layout.NoBorders
+import XMonad.Layout.ResizableTile
 
 import XMonad.StackSet
 import XMonad.Hooks.ManageHelpers
@@ -60,17 +61,18 @@ myConfig = do
       ((mod4Mask, xK_b), sendMessage ToggleStruts),
       ((mod4Mask, xK_u), prevWS),
       ((mod4Mask, xK_i), nextWS),
-      ((mod4Mask .|. shiftMask, xK_i), nextScreen),
-      ((mod4Mask .|. shiftMask, xK_u), prevScreen),
+      ((mod4Mask .|. shiftMask, xK_i), prevScreen),
+      ((mod4Mask .|. shiftMask, xK_u), nextScreen),
       ((mod4Mask, xK_c), spawn "emacs"),
       ((mod4Mask, xK_z), spawn "zathura"),
-      ((mod4Mask, xK_o), spawn "google-chrome-stable"),
-      ((mod4Mask, xK_n), spawn "google-chrome --app=http://radio.nrk.no/direkte/p13"),
+      ((mod4Mask, xK_o), spawn "google-chrome"),
       ((mod4Mask, xK_w), kill),
       ((0, xK_Scroll_Lock), spawn "dmenu_run -b -i -l 10 -p \">\" -fn \"-*-helvetica-bold-r-normal-*-17-*-100-*-p-0-*-15\""),
       ((mod4Mask, xK_Scroll_Lock), spawn "~/.calc.sh"),
       -- task mgr
       ((mod1Mask .|. controlMask, xK_Delete), spawn "gnome-system-monitor"),
+      ((mod4Mask .|. controlMask, xK_h), sendMessage Shrink),
+      ((mod4Mask .|. controlMask, xK_l), sendMessage Expand),
 
       -- Audio
       ((mod4Mask, xK_a), spawn "gnome-terminal -e alsamixer -c 1"),
@@ -91,7 +93,7 @@ myStartupHook=do
   spawnOn "web" "google-chrome"
   spawnOn "slack" "google-chrome --app=https://p15ntnu.slack.com"
 
-myWorkspaces = ["term", "emacs", "web", "slack"] ++ map show ([5..8] :: [Int]) ++ ["irssi"]
+myWorkspaces = ["term", "emacs", "web", "slack"] ++ map show ([5..9] :: [Int])
 
 --startup = do
 --  spawn "synaptikscfg load"
