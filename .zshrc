@@ -7,11 +7,6 @@ setopt histignorealldups sharehistory
 
 source ~/.bash_aliases
 
-# Temporary custom aliases
-alias odinadmin="cd ~/micronax/odin-image && ls"
-alias odinserver="cd ~/micronax/odin-server && ls"
-alias odinclient="cd ~/micronax/odin && ls"
-
 # Permanent custom aliases
 alias pm-hibernate='sudo pm-hibernate'
 alias ls='ls -F --color=auto --sort=extension'
@@ -46,6 +41,7 @@ alias ctar="tar -cvf"
 alias ctarbz2="tar -cjvf"
 alias ctargz="tar -czvf"
 alias czip="zip -r"
+alias ipext="dig +short myip.opendns.com @resolver1.opendns.com"
 
 # Use emacs keybindings even if the EDITOR is set to vi
 bindkey -e
@@ -193,4 +189,7 @@ powersave(){
     fi
 }
 
-PATH=$PATH:/home/evenlis/.cabal/bin/:/home/evenlis/dev/android-sdk-linux/platform-tools
+PATH=$PATH:/home/evenlis/.cabal/bin/:/home/evenlis/dev/android-sdk-linux/platform-tools:/home/evenlis/dev/android-ndk-r10:/home/evenlis/dev/android-sdk-linux/tools
+
+export PATH="$PATH:/home/evenlis/anaconda/bin"
+function gi() { curl -L -s https://www.gitignore.io/api/$@ ;}
